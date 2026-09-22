@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="night">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anushka Jambhavdekar | Portfolio</title>
+  <meta name="description" content="Portfolio of Anushka Jambhavdekar, third year Computer Science Engineering student at KIT College of Engineering, Kolhapur.">
+  <meta name="theme-color" content="#0a1226">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232455e8'/%3E%3Cpath d='m12 10-6 6 6 6M20 10l6 6-6 6' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>try{var t=localStorage.getItem("ap-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#editor">Skip to content</a>
+<div class="app" id="app">
+
+  <header class="titlebar">
+    <div class="tb-left">
+      <button class="icon-btn tb-menu" id="menu-btn" type="button" aria-label="Open file explorer"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="tb-title">anushka-portfolio</span>
+    </div>
+    <button class="palette-btn" id="palette-open" type="button" aria-label="Open command palette"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><span>Search files and commands</span><kbd>Ctrl K</kbd></button>
+    <div class="tb-right">
+      <button class="icon-btn theme-btn" id="theme-btn" type="button" aria-label="Switch to day theme"><svg class="i i-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 13A9 9 0 1 1 11 3a7 7 0 0 0 10 10z"/></svg><svg class="i i-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.500 1.500M17.500 17.500 19 19M5 19l1.500-1.500M17.500 6.500 19 5"/></svg></button>
+    </div>
+  </header>
+
+  <div class="body">
+    <nav class="activity" aria-label="Quick access">
+      <div class="group">
+        <button class="act" id="act-explorer" type="button" title="Explorer (Ctrl B)" aria-label="Toggle explorer"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M4 7v14h11"/></svg></button>
+        <button class="act" data-open="about" type="button" title="about.md" aria-label="Open about.md"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></button>
+        <button class="act" data-open="skills" type="button" title="skills.json" aria-label="Open skills.json"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg></button>
+        <button class="act" data-open="projects" type="button" title="projects" aria-label="Open projects"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="5" r="2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="9" r="2"/><path d="M6 7v10M18 11c0 4-6 3-12 6"/></svg></button>
+        <button class="act" data-open="gallery" type="button" title="gallery" aria-label="Open gallery"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="m4 18 5-5 4 4 3-3 4 4"/></svg></button>
+        <button class="act" data-open="contact" type="button" title="contact.ts" aria-label="Open contact.ts"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></button>
+      </div>
+      <div class="group">
+        <button class="act" id="act-term" type="button" title="Terminal (Ctrl `)" aria-label="Toggle terminal"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m6 10 3 2-3 2M12 15h6"/></svg></button>
+      </div>
+    </nav>
+
+    <aside class="sidebar" id="sidebar" aria-label="File explorer">
+      <div class="side-head">Explorer</div>
+      <div class="tree" role="tree" aria-label="Portfolio files">
+        <div class="root-row"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg> ANUSHKA-PORTFOLIO</div>
+        <button class="node" type="button" role="treeitem" data-open="readme"><span class="ic md">MD</span>README.md</button>
+        <button class="node" type="button" role="treeitem" data-open="about"><span class="ic md">MD</span>about.md</button>
+        <button class="node" type="button" role="treeitem" data-open="skills"><span class="ic json">{}</span>skills.json</button>
+        <button class="node" type="button" role="treeitem" data-folder="projects" data-open="projects" aria-expanded="true"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg><span class="ic dir">DIR</span>projects</button>
+        <div class="children" id="g-projects" role="group">
+          <button class="node l2" type="button" role="treeitem" data-open="bluevision"><span class="ic md">MD</span>bluevision.md</button>
+          <button class="node l2" type="button" role="treeitem" data-open="sos"><span class="ic md">MD</span>sos-system.md</button>
+          <button class="node l2" type="button" role="treeitem" data-open="academic"><span class="ic md">MD</span>academic-mini-projects.md</button>
+        </div>
+        <button class="node" type="button" role="treeitem" data-folder="gallery" data-open="gallery" aria-expanded="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg><span class="ic dir">DIR</span>gallery</button>
+        <div class="children" id="g-gallery" role="group" hidden>
+            <button class="node l2" type="button" role="treeitem" data-img="walchand (5).png"><span class="ic png">IMG</span>walchand (5).png</button>
+            <button class="node l2" type="button" role="treeitem" data-img="walchand (11).jpeg"><span class="ic png">IMG</span>walchand (11).jpeg</button>
+            <button class="node l2" type="button" role="treeitem" data-img="walchand (2).jpeg"><span class="ic png">IMG</span>walchand (2).jpeg</button>
+            <button class="node l2" type="button" role="treeitem" data-img="oracal.png"><span class="ic png">IMG</span>oracal.png</button>
+            <button class="node l2" type="button" role="treeitem" data-img="google student.png"><span class="ic png">IMG</span>google student.png</button>
+            <button class="node l2" type="button" role="treeitem" data-img="Datascience.png"><span class="ic png">IMG</span>Datascience.png</button>
+            <button class="node l2" type="button" role="treeitem" data-img="pbl.png"><span class="ic png">IMG</span>pbl.png</button>
+            <button class="node l2" type="button" role="treeitem" data-img="pbl 1.jpeg"><span class="ic png">IMG</span>pbl 1.jpeg</button>
+            <button class="node l2" type="button" role="treeitem" data-img="pbl2.jpeg"><span class="ic png">IMG</span>pbl2.jpeg</button>
+            <button class="node l2" type="button" role="treeitem" data-img="Google Kaggel.png"><span class="ic png">IMG</span>Google Kaggel.png</button>
+            <button class="node l2" type="button" role="treeitem" data-img="HCL.png"><span class="ic png">IMG</span>HCL.png</button>
+            <button class="node l2" type="button" role="treeitem" data-img="kalaa.png"><span class="ic png">IMG</span>kalaa.png</button>
+            <button class="node l2" type="button" role="treeitem" data-img="job sim.png"><span class="ic png">IMG</span>job sim.png</button>
+            <button class="node l2" type="button" role="treeitem" data-img="cyber sim.png"><span class="ic png">IMG</span>cyber sim.png</button>
+            <button class="node l2" type="button" role="treeitem" data-img="data sim.png"><span class="ic png">IMG</span>data sim.png</button>
+        </div>
+        <button class="node" type="button" role="treeitem" data-open="contact"><span class="ic ts">TS</span>contact.ts</button>
+      </div>
+    </aside>
+    <div class="scrim" id="scrim"></div>
+
+    <div class="workbench">
+      <div class="tabs" id="tabs" role="tablist" aria-label="Open files"></div>
+      <div class="crumbs" id="crumbs" aria-label="File path"></div>
+      <main class="editor" id="editor" tabindex="-1">
+
+        <!-- ============ README.md (home) ============ -->
+        <section class="view view-home" data-view="readme">
+          <div class="hero">
+            <canvas id="net" aria-hidden="true"></canvas>
+            <div class="spot" aria-hidden="true"></div>
+            <div class="hero-in">
+              <div>
+                <p class="hello">// Hello, I am</p>
+                <h1>Anushka Jambhavdekar</h1>
+                <p class="role">Third Year Computer Science Engineering Student</p>
+                <ul class="chips" aria-label="Interests">
+                  <li class="chip">Web Development</li><li class="chip">Artificial Intelligence</li><li class="chip">Software Engineering</li>
+                </ul>
+                <div class="actions">
+                  <a class="btn" href="#projects" data-open="projects">See my projects</a>
+                  <a class="btn ghost" href="#contact" data-open="contact">Contact me</a>
+                </div>
+              </div>
+              <div class="codecard" aria-hidden="true">
+                <div class="cc-bar"><span class="dots"><i></i><i></i><i></i></span>anushka.ts</div>
+                <pre class="code" id="typed-code"></pre>
+              </div>
+            </div>
+          </div>
+          <div class="explore">
+            <h2>Explore the files</h2>
+            <div class="tiles">
+              <a class="tile glow" href="#about" data-open="about"><b>about.md</b><span class="d">Education and career objective</span></a>
+              <a class="tile glow" href="#skills" data-open="skills"><b>skills.json</b><span class="d">Languages, technologies and tools</span></a>
+              <a class="tile glow" href="#projects" data-open="projects"><b>projects/</b><span class="d">BlueVision, SOS System and more</span></a>
+              <a class="tile glow" href="#gallery" data-open="gallery"><b>gallery/</b><span class="d">Certificates and achievements</span></a>
+              <a class="tile glow" href="#contact" data-open="contact"><b>contact.ts</b><span class="d">Email, phone, LinkedIn, GitHub</span></a>
+            </div>
+            <p class="foot">Tip: press <kbd>Ctrl</kbd> <kbd>K</kbd> to search, or <kbd>Ctrl</kbd> <kbd>`</kbd> to open the terminal.<br>&copy; 2026 Anushka Jambhavdekar | Portfolio Website</p>
+          </div>
+        </section>
+
+        <!-- ============ about.md ============ -->
+        <section class="view" data-view="about" hidden>
+          <header class="vhead"><h1><span class="hash">#</span>About Me</h1><p>Education and career objective.</p></header>
+          <div class="about">
+            <figure style="margin:0">
+              <div class="avatar"><span aria-hidden="true">AJ</span><img src="pro%20photo.jpeg" alt="Portrait of Anushka Jambhavdekar" onerror="this.remove()"></div>
+              <figcaption class="avatar-cap">Anushka Namdev Jambhavdekar</figcaption>
+            </figure>
+            <div class="md">
+              <h2><span class="hash">##</span>Education</h2>
+              <p>Pursuing B.Tech in Computer Science Engineering from KIT College of Engineering, Kolhapur (2024 - 2028).</p>
+              <table class="spec">
+                <caption class="sr-only">Details</caption>
+                <tr><th scope="row">Name</th><td>Anushka Namdev Jambhavdekar</td></tr>
+                <tr><th scope="row">Branch</th><td>Computer Science Engineering</td></tr>
+                <tr><th scope="row">College</th><td>KIT College of Engineering</td></tr>
+                <tr><th scope="row">Year</th><td>Third Year</td></tr>
+              </table>
+              <h2><span class="hash">##</span>Career Objective</h2>
+              <ul class="checks">
+                <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg><span>Passionate Computer Science student.</span></li>
+                <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg><span>Interested in Web Development, Artificial Intelligence and Software Engineering.</span></li>
+                <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg><span>Seeking opportunities to apply my skills and contribute to impactful projects.</span></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ skills.json ============ -->
+        <section class="view" data-view="skills" hidden>
+          <header class="vhead"><h1><span class="hash">#</span>Skills</h1><p>Programming languages, technologies and tools. Hover a card to find it in the JSON.</p></header>
+          <div class="skills-wrap">
+            <div class="skill-cards">
+          <article class="card skill glow" data-i="0" data-key="fullStack" data-items="Frontend|Backend">
+            <span class="ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg></span><h3>Full Stack Development</h3><p>Frontend and backend</p><ul class="chips"><li class="chip">Frontend</li><li class="chip">Backend</li></ul>
+          </article>
+          <article class="card skill glow" data-i="1" data-key="python" data-items="AI|Web development|DevOps|Data science">
+            <span class="ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m6 10 3 2-3 2M12 15h6"/></svg></span><h3>Python Programming</h3><p>AI, web development, DevOps and data science</p><ul class="chips"><li class="chip">AI</li><li class="chip">Web development</li><li class="chip">DevOps</li><li class="chip">Data science</li></ul>
+          </article>
+          <article class="card skill glow" data-i="2" data-key="cyberSecurity" data-items="Ethical hacking|Network security">
+            <span class="ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3 5 6v5c0 5 3 8 7 10 4-2 7-5 7-10V6z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Cyber Security</h3><p>Ethical hacking and network security fundamentals</p><ul class="chips"><li class="chip">Ethical hacking</li><li class="chip">Network security</li></ul>
+          </article>
+          <article class="card skill glow" data-i="3" data-key="webDevelopment" data-items="HTML|CSS|JavaScript|React|Bootstrap">
+            <span class="ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></span><h3>Web Development</h3><p>Web technologies and frameworks</p><ul class="chips"><li class="chip">HTML</li><li class="chip">CSS</li><li class="chip">JavaScript</li><li class="chip">React</li><li class="chip">Bootstrap</li></ul>
+          </article>
+          <article class="card skill glow" data-i="4" data-key="programming" data-items="C|C++|Java|Python">
+            <span class="ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg></span><h3>Programming</h3><p>Programming languages and concepts</p><ul class="chips"><li class="chip">C</li><li class="chip">C++</li><li class="chip">Java</li><li class="chip">Python</li></ul>
+          </article>
+          <article class="card skill glow" data-i="5" data-key="databaseAndTools" data-items="MySQL|Git|GitHub|VS Code">
+            <span class="ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.700 3.600 3 8 3s8-1.300 8-3V6M4 12v6c0 1.700 3.600 3 8 3s8-1.300 8-3v-6"/></svg></span><h3>Database &amp; Tools</h3><p>Database management and development tools</p><ul class="chips"><li class="chip">MySQL</li><li class="chip">Git</li><li class="chip">GitHub</li><li class="chip">VS Code</li></ul>
+          </article>
+            </div>
+            <div class="card jsoncard">
+              <div class="cc-bar"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg> skills.json</div>
+              <pre class="json" id="json" aria-label="The same skills as JSON"></pre>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ projects/ ============ -->
+        <section class="view" data-view="projects" hidden>
+          <header class="vhead"><h1><span class="hash">#</span>My Projects</h1><p>BlueVision, SOS System and academic projects. Open one to see the details.</p></header>
+          <div class="repos">
+            <button class="card repo glow" type="button" data-open="bluevision">
+              <h3>BlueVision</h3><p class="sub">2D Blueprint to 3D Model Converter</p>
+              <p class="d">Converts 2D architectural blueprints into interactive 3D models for visualization.</p>
+              <span class="status active">Active</span>
+            </button>
+            <button class="card repo glow" type="button" data-open="sos">
+              <h3>SOS System</h3><p class="sub">Emergency Alert &amp; Volunteer Assistance System</p>
+              <p class="d">Smart emergency assistance platform with volunteer support and alert management.</p>
+              <span class="status">Inactive</span>
+            </button>
+            <button class="card repo glow" type="button" data-open="academic">
+              <h3>Academic Mini Projects</h3><p class="sub">Engineering studies and competitions</p>
+              <p class="d">Collection of academic projects completed during engineering studies and competitions.</p>
+              <span class="status active">Active</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- ============ bluevision.md ============ -->
+        <section class="view" data-view="bluevision" hidden>
+          <div class="pd">
+            <div>
+              <span class="status active">Active</span>
+              <h1>BlueVision</h1>
+              <p class="psub">2D Blueprint to 3D Model Converter</p>
+              <p class="lead">Converts 2D architectural blueprints into interactive 3D models for visualization.</p>
+              <div class="actions">
+                <!-- TODO: replace with the exact repository link -->
+                <a class="btn" href="https://github.com/anushkajambhavdekar" target="_blank" rel="noopener">View on GitHub</a>
+                <button class="btn ghost" type="button" data-open="projects">All projects</button>
+              </div>
+            </div>
+            <div class="card diagram">
+              <svg viewBox="0 0 460 260" role="img" aria-label="A 2D blueprint flowing into a 3D model">
+                <rect class="dg-box" x="20" y="50" width="150" height="150" rx="14"/>
+                <path class="dg-line" d="M45 90h100M45 125h100M45 160h100M70 75v100M95 75v100M120 75v100"/>
+                <text class="dg-txt" x="95" y="228">2D blueprint</text>
+                <path class="dg-flow" d="M186 125h84"/>
+                <path class="dg-line" d="M264 116l10 9-10 9"/>
+                <rect class="dg-box" x="290" y="50" width="150" height="150" rx="14"/>
+                <path class="dg-line" d="M365 82l45 22v46l-45 22-45-22v-46z"/>
+                <path class="dg-line" d="M320 104l45 22 45-22M365 126v46"/>
+                <text class="dg-txt" x="365" y="228">3D model</text>
+              </svg>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ sos-system.md ============ -->
+        <section class="view" data-view="sos" hidden>
+          <div class="pd">
+            <div>
+              <span class="status">Inactive</span>
+              <h1>SOS System</h1>
+              <p class="psub">Emergency Alert &amp; Volunteer Assistance System</p>
+              <p class="lead">Smart emergency assistance platform with volunteer support and alert management.</p>
+              <div class="actions">
+                <!-- TODO: replace with the exact repository link -->
+                <a class="btn" href="https://github.com/anushkajambhavdekar" target="_blank" rel="noopener">View on GitHub</a>
+                <button class="btn ghost" type="button" data-open="projects">All projects</button>
+              </div>
+            </div>
+            <div class="card diagram">
+              <svg viewBox="0 0 460 260" role="img" aria-label="An alert reaching nearby volunteers">
+                <circle class="dg-box" cx="90" cy="130" r="46"/>
+                <circle class="dg-ring" cx="90" cy="130" r="46"/>
+                <path class="dg-line" d="M90 108v24M90 146v2"/>
+                <text class="dg-txt" x="90" y="208">alert</text>
+                <path class="dg-flow" d="M140 118C190 100 250 72 306 60"/>
+                <path class="dg-flow" d="M140 130H306"/>
+                <path class="dg-flow" d="M140 142C190 160 250 188 306 200"/>
+                <g transform="translate(330 60)"><circle class="dg-box" r="22"/><circle class="dg-line" cy="-5" r="6"/><path class="dg-line" d="M-12 13a12 12 0 0 1 24 0"/></g>
+                <g transform="translate(330 130)"><circle class="dg-box" r="22"/><circle class="dg-line" cy="-5" r="6"/><path class="dg-line" d="M-12 13a12 12 0 0 1 24 0"/></g>
+                <g transform="translate(330 200)"><circle class="dg-box" r="22"/><circle class="dg-line" cy="-5" r="6"/><path class="dg-line" d="M-12 13a12 12 0 0 1 24 0"/></g>
+                <text class="dg-txt" x="405" y="134">volunteers</text>
+              </svg>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ academic-mini-projects.md ============ -->
+        <section class="view" data-view="academic" hidden>
+          <div class="pd">
+            <div>
+              <span class="status active">Active</span>
+              <h1>Academic Mini Projects</h1>
+              <p class="psub">Engineering studies and competitions</p>
+              <p class="lead">Collection of academic projects completed during engineering studies and competitions.</p>
+              <div class="actions">
+                <a class="btn" href="https://www.linkedin.com/posts/anushkajambhavdekar120506_pbl-projectbasedlearning-kitpblday2025-ugcPost-7466418686459973632-WRLe/?utm_source=share&amp;utm_medium=member_desktop" target="_blank" rel="noopener">View on LinkedIn</a>
+                <button class="btn ghost" type="button" data-open="projects">All projects</button>
+              </div>
+            </div>
+            <div class="card diagram">
+              <svg viewBox="0 0 460 260" role="img" aria-label="A graduation cap above a code line">
+                <path class="dg-line" d="M230 40l110 46-110 46-110-46z"/>
+                <path class="dg-line" d="M160 108v44c0 20 140 20 140 0v-44"/>
+                <path class="dg-line" d="M340 86v60"/>
+                <circle class="dg-line" cx="340" cy="154" r="7"/>
+                <path class="dg-flow" d="M120 205h220"/>
+                <text class="dg-txt" x="230" y="238">engineering studies and competitions</text>
+              </svg>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ gallery/ ============ -->
+        <section class="view" data-view="gallery" hidden>
+          <header class="vhead"><h1><span class="hash">#</span>Achievement Gallery</h1><p>Certificates and moments from my learning journey. Select one to enlarge it.</p></header>
+          <div class="thumbs" id="thumbs">
+          <button class="thumb" type="button" data-file="walchand (5).png" aria-label="View walchand (5).png"><div class="pic"><img src="walchand%20%285%29.png" alt="walchand (5).png" loading="lazy" onerror="this.closest('.thumb').remove()"></div><div class="cap"><span class="ic png">IMG</span>walchand (5).png</div></button>
+          <button class="thumb" type="button" data-file="walchand (11).jpeg" aria-label="View walchand (11).jpeg"><div class="pic"><img src="walchand%20%2811%29.jpeg" alt="walchand (11).jpeg" loading="lazy" onerror="this.closest('.thumb').remove()"></div><div class="cap"><span class="ic png">IMG</span>walchand (11).jpeg</div></button>
+          <button class="thumb" type="button" data-file="walchand (2).jpeg" aria-label="View walchand (2).jpeg"><div class="pic"><img src="walchand%20%282%29.jpeg" alt="walchand (2).jpeg" loading="lazy" onerror="this.closest('.thumb').remove()"></div><div class="cap"><span class="ic png">IMG</span>walchand (2).jpeg</div></button>
+          <button class="thumb" type="button" data-file="oracal.png" aria-label="View oracal.png"><div class="pic"><img src="oracal.png" alt="oracal.png" loading="lazy" onerror="this.closest('.thumb').remove()"></div><div class="cap"><span class="ic png">IMG</span>oracal.png</div></button>
+          <button class="thumb" type="button" data-file="google student.png" aria-label="View google student.png"><div class="pic"><img src="google%20student.png" alt="google student.png" loading="lazy" onerror="this.closest('.thumb').remove()"></div><div class="cap"><span class="ic png">IMG</span>google student.png</div></button>
+          <button class="thumb" type="button" data-file="Datascience.png" aria-label="View Datascience.png"><div class="pic"><img src="Datascience.png" alt="Datascience.png" loading="lazy" onerror="this.closest('.thumb').remove()"></div><div class="cap"><span class="ic png">IMG</span>Datascience.png</div></button>
+          <button class="thumb" type="button" data-file="pbl.png" aria-label="View pbl.png"><div class="pic"><img src="pbl.png" alt="pbl.png" loading="lazy" onerror="this.closest('.thumb').remove()"></div><div class="cap"><span class="ic png">IMG</span>pbl.png</div></button>
+          <button class="thumb" type="button" data-file="pbl 1.jpeg" aria-label="View pbl 1.jpeg"><div class="pic"><img src="pbl%201.jpeg" alt="pbl 1.jpeg" loading="lazy" onerror="this.closest('.thumb').remove()"></div><div class="cap"><span class="ic png">IMG</span>pbl 1.jpeg</div></button>
+          <button class="thumb" type="button" data-file="pbl2.jpeg" aria-label="View pbl2.jpeg"><div class="pic"><img src="pbl2.jpeg" alt="pbl2.jpeg" loading="lazy" onerror="this.closest('.thumb').remove()"></div><div class="cap"><span class="ic png">IMG</span>pbl2.jpeg</div></button>
+          <button class="thumb" type="button" data-file="Google Kaggel.png" aria-label="View Google Kaggel.png"><div class="pic"><img src="Google%20Kaggel.png" alt="Google Kaggel.png" loading="lazy" onerror="this.closest('.thumb').remove()"></div><div class="cap"><span class="ic png">IMG</span>Google Kaggel.png</div></button>
+          <button class="thumb" type="button" data-file="HCL.png" aria-label="View HCL.png"><div class="pic"><img src="HCL.png" alt="HCL.png" loading="lazy" onerror="this.closest('.thumb').remove()"></div><div class="cap"><span class="ic png">IMG</span>HCL.png</div></button>
+          <button class="thumb" type="button" data-file="kalaa.png" aria-label="View kalaa.png"><div class="pic"><img src="kalaa.png" alt="kalaa.png" loading="lazy" onerror="this.closest('.thumb').remove()"></div><div class="cap"><span class="ic png">IMG</span>kalaa.png</div></button>
+          <button class="thumb" type="button" data-file="job sim.png" aria-label="View job sim.png"><div class="pic"><img src="job%20sim.png" alt="job sim.png" loading="lazy" onerror="this.closest('.thumb').remove()"></div><div class="cap"><span class="ic png">IMG</span>job sim.png</div></button>
+          <button class="thumb" type="button" data-file="cyber sim.png" aria-label="View cyber sim.png"><div class="pic"><img src="cyber%20sim.png" alt="cyber sim.png" loading="lazy" onerror="this.closest('.thumb').remove()"></div><div class="cap"><span class="ic png">IMG</span>cyber sim.png</div></button>
+          <button class="thumb" type="button" data-file="data sim.png" aria-label="View data sim.png"><div class="pic"><img src="data%20sim.png" alt="data sim.png" loading="lazy" onerror="this.closest('.thumb').remove()"></div><div class="cap"><span class="ic png">IMG</span>data sim.png</div></button>
+          </div>
+        </section>
+
+        <!-- ============ contact.ts ============ -->
+        <section class="view" data-view="contact" hidden>
+          <header class="vhead"><h1><span class="hash">#</span>Get In Touch</h1><p>Have a project, an internship or an idea in mind? Send me a message.</p></header>
+          <div class="contact">
+            <div class="card codecard" style="overflow:hidden">
+              <div class="cc-bar"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg> contact.ts</div>
+              <pre class="code"><span class="k">export const</span> <span class="v">contact</span> <span class="o">=</span> <span class="o">{</span>
+  <span class="p">email</span><span class="o">:</span> <span class="s">"<a href="mailto:anushkajambhavdekar@gmail.com">anushkajambhavdekar@gmail.com</a>"</span><span class="o">,</span>
+  <span class="p">phone</span><span class="o">:</span> <span class="s">"<a href="tel:+919011330235">+91 9011330235</a>"</span><span class="o">,</span>
+  <span class="p">linkedin</span><span class="o">:</span> <span class="s">"<a href="https://www.linkedin.com/in/anushkajambhavdekar120506/" target="_blank" rel="noopener">anushkajambhavdekar120506</a>"</span><span class="o">,</span>
+  <span class="p">github</span><span class="o">:</span> <span class="s">"<a href="https://github.com/anushkajambhavdekar" target="_blank" rel="noopener">anushkajambhavdekar</a>"</span><span class="o">,</span>
+<span class="o">};</span></pre>
+              <div class="copyrow">
+                <button class="mini" type="button" data-copy="anushkajambhavdekar@gmail.com"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg> Copy email</button>
+                <button class="mini" type="button" data-copy="+91 9011330235"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg> Copy phone</button>
+              </div>
+            </div>
+            <form class="card form" id="contact-form" action="mailto:anushkajambhavdekar@gmail.com?subject=Portfolio%20message" method="post" enctype="text/plain">
+              <h2>sendMessage()</h2>
+              <div class="field"><label for="name">name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+              <div class="field"><label for="email">email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+              <div class="field"><label for="message">message</label><textarea id="message" name="message" required></textarea></div>
+              <button class="btn" type="submit">Send message</button>
+              <p class="form-note">This opens your email app with the message filled in.</p>
+            </form>
+          </div>
+          <div class="card map">
+            <h2>College location</h2>
+            <iframe title="Map showing KIT College of Engineering, Kolhapur" src="https://maps.google.com/maps?q=KIT%20College%20of%20Engineering%20Kolhapur&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <p class="foot">&copy; 2026 Anushka Jambhavdekar | Portfolio Website</p>
+        </section>
+
+      </main>
+
+      <section class="term" id="term" aria-label="Terminal" hidden>
+        <div class="term-head"><span>Terminal</span><button class="icon-btn" id="term-close" type="button" aria-label="Close terminal"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+        <div class="term-body" id="term-out" role="log" aria-live="polite" tabindex="0"></div>
+        <form class="term-form" id="term-form" autocomplete="off">
+          <label for="term-in">anushka@portfolio:~$</label>
+          <input id="term-in" type="text" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Terminal command">
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <footer class="statusbar">
+    <div class="grp">
+      <button class="sb" type="button" data-open="readme" title="Go to README.md"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="5" r="2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="9" r="2"/><path d="M6 7v10M18 11c0 4-6 3-12 6"/></svg> main</button>
+      <span class="sb txt hide-sm">KIT College of Engineering</span>
+      <span class="sb txt hide-sm">B.Tech CSE, 2024 - 2028</span>
+    </div>
+    <div class="grp">
+      <button class="sb" id="sb-term" type="button"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m6 10 3 2-3 2M12 15h6"/></svg> Terminal</button>
+      <button class="sb hide-sm" id="sb-theme" type="button">Theme: Night</button>
+      <button class="sb hide-sm" id="sb-palette" type="button">Ctrl K</button>
+    </div>
+  </footer>
+</div>
+
+<div class="palette" id="palette" hidden>
+  <div class="pal-box" role="dialog" aria-modal="true" aria-label="Command palette">
+    <input id="pal-in" type="text" placeholder="Type a file or command" aria-label="Search files and commands" aria-controls="pal-list" autocomplete="off" spellcheck="false">
+    <ul class="pal-list" id="pal-list" role="listbox"></ul>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+  <button class="lb-btn lb-close" type="button" aria-label="Close">&times;</button>
+  <button class="lb-btn lb-prev" type="button" aria-label="Previous image">&#8249;</button>
+  <img id="lb-img" alt="">
+  <button class="lb-btn lb-next" type="button" aria-label="Next image">&#8250;</button>
+  <p class="lb-count" id="lb-count" aria-live="polite"></p>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
